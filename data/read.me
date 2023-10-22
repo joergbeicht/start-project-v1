@@ -1,0 +1,26 @@
+1. Git Repository erstellen
+>: git init
+
+2. Working with Commits (Code Snapshots)
+>: git add index.html
+>: git add .  // alle Files im Projekt
+>: git add *  // das gleiche wie . alle Files im Projekt
+>: git add folder_name  // alles im Folder und SubFolders
+>: git commit index.html is added
+>: git add one-more.html demo.txt
+>: git commit one-more.html and demo.txt is added
+>: git status
+>: git log "liefert die id's für einen checkout eines Snapshots
+>: git checkout
+>: git revert // zurück drehen
+>: git reset --hard id // bringt den SnapShot auf den Stand bis id zurück
+
+
+
+
+Was ist Stage (ein wichtiger Begriff!)
+======================================
+Nach einem commit ist/sind die neuen oder atualisierten Dateien stage!
+
+Hinweise:
+git add, status und commit muss jedesmal ausgeführt werden. Sonst ist die Datei index.html NICHT staged!
