@@ -13,11 +13,15 @@
 >: git log "liefert die id's für einen checkout eines Snapshots
 >: git checkout
 >: git revert // zurück drehen
->: git reset --hard id // bringt den SnapShot auf den Stand bis id zurück
+>: git reset --hard id // bringt den SnapShot auf den Stand bis id zurück, die id kann mit git log gefunden werden
 
 3. Understanding Branches
->: git branch feature-branch-1
-
+>: git branch feature-branch-1 // erstellt einen branch
+>: git branch  // listet alle branches
+>: git checkout feature-branch-1  // wechselt auf den branch.. mit git log prüfen
+>: git branch -D feature-branch-1 // löscht den branch
+>: git checkout -b feature-branch-1 // ist zwei in eins -> erstellt einen neuen branch und macht dirket einen checkout
+>: 
 
 Was ist Stage (ein wichtiger Begriff!)
 ======================================
