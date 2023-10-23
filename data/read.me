@@ -40,8 +40,14 @@
     >: git remote add origin https://github.com/joergbeicht/start-project-v1.git
     // push von local main brunch namens origin to remote brunch namens main
     // main wird gleichzeitig erstellt falls nicht vorhanden
-    >: git push origin main  
+    >: git push origin main
+    // bei fehlenden zugriffs-rechten dein-git-name@ ergänzen
+    // und als passwort einen token erstellen unter settings in github -> lektion 24 
+    >: git remote set-url origin https://dein-git-name@github.com/joergbeicht/start-project-v1.git
+    >: git push --set-upstream origin main
 
+5. Mit einem Feature oder ein BugFix arbeiten
+    >: git checkout -b feat-section
 
 
 Was ist Stage (ein wichtiger Begriff!)
