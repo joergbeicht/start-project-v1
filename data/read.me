@@ -21,7 +21,28 @@
 >: git checkout feature-branch-1  // wechselt auf den branch.. mit git log prüfen
 >: git branch -D feature-branch-1 // löscht den branch
 >: git checkout -b feature-branch-1 // ist zwei in eins -> erstellt einen neuen branch und macht dirket einen checkout
->: 
+>: git merge // Vorgehen -> 
+   1. Fall: main hat einen Fix bekommen und feature-brunch-1 ist fertig
+            - Annahme: wir stehen in feature-brunch-1 => git checkout feature-branch-1
+            - git merge main => main Fix wird in feature-brunch-1 gemerged;
+            - git checkout main => jetzt erst Wechsel auf main; du steht auf main
+            - git merge feature-brunch-1 => jetzt hat main den neuen vollständigen stand
+            - git branch -D feature-branch-1 => Feature Branch löschen
+    => Das machst du um den main nicht versehentlich zu zerstören
+    2. Fall: main hat keine Fix
+            - git checkout main => direkt Wechsel auf main; du steht auf main
+            - git merge feature-brunch-1 => jetzt hat main den neuen vollständigen stand
+            - git branch -D feature-branch-1 => Feature Branch löschen
+
+4. GitHub
+    Ein bestehendes Repository einem bestehenden localen git hinzufügen
+    // git remote add irgendein_name url // meist wird origin benutzt! irgendein_name ist der lokale identifier
+    >: git remote add origin https://github.com/joergbeicht/start-project-v1.git
+    // push von local main brunch namens origin to remote brunch namens main
+    // main wird gleichzeitig erstellt falls nicht vorhanden
+    >: git push origin main  
+
+
 
 Was ist Stage (ein wichtiger Begriff!)
 ======================================
